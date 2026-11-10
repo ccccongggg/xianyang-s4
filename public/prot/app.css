@@ -32,7 +32,7 @@ body{background:#EFE6D2;font-family:var(--sans);color:var(--text);line-height:1.
 img{display:block;max-width:100%}
 button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit}
 .phone{max-width:47rem;margin:0 auto;min-height:100dvh;position:relative;background:var(--cream);overflow-x:clip;
-  background-image:url("./art/cloud.jpg");background-size:23.5rem;background-attachment:local}
+  background-image:url("../art/cloud.jpg");background-size:23.5rem;background-attachment:local}
 .phone::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,243,227,.55),rgba(251,243,227,.88) 30%,rgba(251,243,227,.92));pointer-events:none}
 .phone>*{position:relative;z-index:1}
 

@@ -50,7 +50,9 @@ const active = computed(() => {
 const show = computed(() => {
   const p = route.path
   if (p.startsWith('/train')) return false
-  const noTab = ['/splash', '/welcome', '/onboarding', '/pose-lab']
+  // 引导类页面要沉浸式全屏，不给底部 Tab 占位。
+  // /onboarding-v2 是七步问卷的插画卡形态，与 /onboarding 一样全屏。
+  const noTab = ['/splash', '/welcome', '/onboarding', '/onboarding-v2', '/pose-lab']
   return !noTab.includes(p)
 })
 
@@ -76,9 +78,9 @@ function go(path) {
   padding-bottom: var(--safe-b);
   padding-left: var(--safe-l);
   padding-right: var(--safe-r);
-  background: rgba(248, 245, 237, .96);
-  border-top: 1px solid rgba(58, 51, 42, .1);
-  box-shadow: 0 -2px 14px rgba(58, 51, 42, .08);
+  background: rgba(251, 243, 227, .96);
+  border-top: 1px solid rgba(92, 70, 50, .1);
+  box-shadow: 0 -2px 14px rgba(92, 70, 50, .08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }

@@ -165,7 +165,7 @@ function pgLoading(){return '<main class="sc center loading-screen" style="paddi
  +'<button class="btn" style="width:32rem;margin:2.6rem auto 0" data-a="load-enter">'+ic('lotus','width:2.4rem;height:2.4rem;color:#F6E3C8')+'进入弦养</button>'
  +'<div class="load-foot">未连接摄像头与动作识别</div>'
  +'</div>'
- +'<div class="load-guqin" style="margin-top:auto"><img src="./art/guqin.png" alt="" style="height:30rem"></div>'
+ +'<div class="load-guqin" style="margin-top:auto"><img src="../art/guqin.png" alt="" style="height:30rem"></div>'
  +'</main>'}
 
 /* ---------- 问答页 ---------- */
@@ -187,7 +187,7 @@ function pgQuestion(){var cards=[
  +'<div class="center" style="margin-top:2.6rem;font-family:var(--serif);font-size:2.5rem;font-weight:700;color:var(--ink);letter-spacing:.08em">你最近哪里容易不舒服?</div>'
  +'<p class="center" style="font-size:1.35rem;color:var(--muted);margin-top:1.2rem;line-height:1.8">你的回答将帮助我们为你生成<br>更合适的今日练习推荐，调和身心，专属定制。</p>'
  +'<div class="qgrid">'+cards.map(function(c,i){return '<button class="qcard'+(state.qSel===i?' sel':'')+'" data-a="qsel" data-i="'+i+'">'
-   +'<span class="ck">'+ic('check')+'</span><img src="./art/'+c[0]+'" alt=""><h4>'+c[1]+'</h4><p>'+c[2]+'</p></button>'}).join('')+'</div>'
+   +'<span class="ck">'+ic('check')+'</span><img src="../art/'+c[0]+'" alt=""><h4>'+c[1]+'</h4><p>'+c[2]+'</p></button>'}).join('')+'</div>'
  +'<div style="display:flex;align-items:center;gap:1.2rem;margin-top:auto;padding-top:2.6rem">'
  +'<button class="btn btn-gho" style="width:auto;padding:0 2.2rem" data-a="q-prev">'+ic('chevl','width:1.5rem;height:1.5rem')+'上一步</button>'
  +'<button class="btn" style="flex:1" data-a="q-next">下一步 '+ic('chev','width:1.5rem;height:1.5rem')+'</button>'
@@ -207,7 +207,7 @@ function pgAudio(){var organs=[
   ['阳春白雪','和煦温暖，健脾养中。','脾·宫','org','调和脾胃','提升专注','06:52','/art/card-landscape.jpg','filter:sepia(.5)'],
   ['梅花三弄','清音入肺，涤尘安神。','肺·商','blu','清润宁神','改善睡眠','07:28','/art/q-none.jpg','filter:hue-rotate(160deg) saturate(.55)']]
  return '<main class="sc navpad" style="min-height:100dvh;display:flex;flex-direction:column">'
- +'<div class="a-hero"><img src="./art/landscape.jpg" alt=""><div class="fade"></div>'
+ +'<div class="a-hero"><img src="../art/landscape.jpg" alt=""><div class="fade"></div>'
   +'<div class="in"><div class="brandrow"><span class="t-callig" style="font-size:4.4rem">弦养·点单</span><span class="seal">弦养</span></div></div></div>'
  +'<div style="margin-top:1.8rem;font-size:1.8rem;font-weight:700;color:var(--brown);letter-spacing:.06em">今天想照顾哪里？</div>'
  +'<p style="font-size:1.3rem;color:var(--muted);margin-top:.8rem;line-height:1.8">五音入五脏，<br>以琴音和身心，<br>让此刻的你，被温柔照顾。</p>'
@@ -221,7 +221,7 @@ function pgAudio(){var organs=[
   +'<button class="btn btn-gho" style="flex:1;min-height:4.8rem;font-size:1.45rem" data-a="random-track">'+ic('shuffle','width:2rem;height:2rem')+'说不上来，随便听听 ›</button>'
   +'<button class="btn" style="flex:1.15;min-height:4.8rem;font-size:1.45rem" data-a="play" data-i="0">'+ic('music','width:2rem;height:2rem')+'练完了·听一首完整的 ›</button></div>'
  +'<section class="player card">'
-  +'<img class="pic" src="./art/card-landscape.jpg" alt="">'
+  +'<img class="pic" src="../art/card-landscape.jpg" alt="">'
   +'<div class="pr"><span class="live">'+ic('music','width:1.2rem;height:1.2rem')+'曲目预览 · 未提供音源</span>'
   +'<div class="tt">'+tracks[Math.max(0,state.track)][0]+' <i aria-hidden="true">♡</i></div>'
   +'<p>'+tracks[Math.max(0,state.track)][1]+'</p>'
@@ -266,7 +266,7 @@ function pgHome(){var recs=[
   ['八段锦 · 羽调','沉静滋养 · 14分钟','安定心神，适合夜晚练习，助眠安睡。','羽调深沉静谧，配合攀足动作，帮助放松腰肾，适合夜晚睡前安神。',['安神助眠','滋养腰肾','适合夜晚']]]
  var r=state.rx||recs[state.rec%recs.length]
  return '<main class="sc navpad" style="display:flex;flex-direction:column;min-height:100dvh">'
- +'<div class="hero"><img class="bg" src="./art/landscape.jpg" alt=""><div class="fade"></div>'
+ +'<div class="hero"><img class="bg" src="../art/landscape.jpg" alt=""><div class="fade"></div>'
   +'<div class="in">'+brand(5.6)
   +'<div class="t-sub">— 让传统之美，滋养当下的你 —</div>'
   +'<div class="jq">今日 · <span class="o">'+(state.fest||'霜降')+'</span></div>'
@@ -287,7 +287,7 @@ function pgHome(){var recs=[
   +'<button class="mseg'+(state.mode===0?' on':'')+'" data-a="mode" data-i="0"><span class="ic">'+ic('medit')+'</span><span class="tx"><b>八段锦</b><span>经典·全身调养</span></span>'+(state.mode===0?'<span class="ckc">'+ic('check')+'</span>':'')+'</button>'
   +'<button class="mseg'+(state.mode===1?' on':'')+'" data-a="mode" data-i="1"><span class="ic">'+ic('deer')+'</span><span class="tx"><b>五禽戏</b><span>灵动·强筋养气</span></span></button>'
   +'<button class="mseg'+(state.mode===2?' on':'')+'" data-a="mode" data-i="2"><span class="ic">'+ic('dice')+'</span><span class="tx"><b>帮我选</b><span>智能推荐练习</span></span><span class="arr">›</span></button></div>'
- +'<div class="quotebar"><img src="./art/card-landscape.jpg" alt=""><p>霜降水返壑，风落木归山。<i>——《月令七十二候集解》</i></p><img src="./art/q-none.jpg" style="filter:hue-rotate(15deg)" alt=""></div>'
+ +'<div class="quotebar"><img src="../art/card-landscape.jpg" alt=""><p>霜降水返壑，风落木归山。<i>——《月令七十二候集解》</i></p><img src="../art/q-none.jpg" style="filter:hue-rotate(15deg)" alt=""></div>'
  +nav('home')+'</main>'}
 
 /* ---------- 八段锦进入页（练习准备） ---------- */
@@ -300,19 +300,19 @@ function pgIntro(){
  return '<main class="sc" style="min-height:100dvh;display:flex;flex-direction:column;padding-bottom:3rem">'
  +'<div class="top"><button class="icbtn" data-a="back">'+ic('back')+'</button><span></span><button class="icbtn" aria-label="练习帮助">'+ic('qmark')+'</button></div>'
  +'<div class="intro-hero" style="margin-top:.6rem">'
-  +'<img class="bg" src="./art/landscape.jpg" style="object-position:74% 22%" alt=""><div class="fade"></div>'
-  +'<img class="fig" src="./art/figure-pose.png" alt="">'
+  +'<img class="bg" src="../art/landscape.jpg" style="object-position:74% 22%" alt=""><div class="fade"></div>'
+  +'<img class="fig" src="../art/figure-pose.png" alt="">'
   +'<div class="in">'+brand(5)
   +'<div class="dashline t-sub" style="margin-top:1.4rem">— 调身 · 静心 · 启程 —</div>'
   +'<p class="intro-p" style="margin-top:1.6rem">在古琴的呼吸里，<br>安放自己，<br>从这一刻，开始练习。</p></div></div>'
  +'<section class="card i-sec"><div class="sec-h">'+knot()+'选择练习模式<span class="sec-note">根据你的时间与状态，选择适合的练习内容</span></div>'
   +'<div class="mode-grid">'
    +'<button class="modecard'+(state.imode===0?' sel':'')+'" data-a="imode" data-i="0"><span class="ck">'+ic('check')+'</span>'
-    +'<img class="pic" src="./art/figure-pose.png" alt="">'
+    +'<img class="pic" src="../art/figure-pose.png" alt="">'
     +'<div class="tt">全套 <b class="big">8</b> 式</div><div class="meta">约12分钟</div>'
     +'<div class="hr"></div><p>完整体验、循序渐进<br>调身养气，身心更佳</p></button>'
    +'<button class="modecard'+(state.imode===1?' sel':'')+'" data-a="imode" data-i="1">'+(state.imode===1?'<span class="ck">'+ic('check')+'</span>':'<span class="rd"></span>')
-    +'<img class="pic" src="./art/card-landscape.jpg" alt="">'
+    +'<img class="pic" src="../art/card-landscape.jpg" alt="">'
     +'<div class="tt">招牌 <b class="big">3</b> 式</div><div class="meta">约5分钟</div>'
     +'<div class="hr"></div><p>精选核心，轻松跟练<br>快速放松，唤醒状态</p></button>'
   +'</div></section>'
@@ -321,7 +321,7 @@ function pgIntro(){
    +(state.istage===i?'<span class="ck">'+ic('check')+'</span>':'')
    +'<b>'+s[0]+'</b><span>'+s[1]+'</span><span class="motif">'+stageMotif[i]+'</span></button>'}).join('')+'</div></section>'
  +'<section class="card i-sec"><div class="sec-h">'+knot()+'调整环境与取景<span class="sec-note">请按提示调整站位和光线，获得更好的练习体验</span></div>'
-  +'<div class="vf-row"><div class="vf"><img src="./art/q-mood.jpg" alt="">'
+  +'<div class="vf-row"><div class="vf"><img src="../art/q-mood.jpg" alt="">'
    +'<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>'
   +'<div class="vf-tx">请后退 <b>1.5−2 米</b>，<br>全身进入取景框，<br>正面受光。</div></div>'
   +'<div class="env-row">'
@@ -352,8 +352,8 @@ function pgPractice(){var i=state.progress,poses=practicePoses()
   +'<div class="pstat"><span class="lb">'+ic('user2')+'上半身</span><div class="v">'+jv(0)+'<i>%</i></div><div class="bar"><i style="width:'+jw(0)+'"></i></div></div>'
   +'<div class="pstat"><span class="lb">'+ic('user2')+'下半身</span><div class="v">'+jv(1)+'<i>%</i></div><div class="bar"><i style="width:'+jw(1)+'"></i></div></div>'
   +'<div class="pstat'+(jw(2)<40?' warn':'')+'"><span class="lb">'+ic('camera')+'取景完整度</span><div class="v">'+jv(2)+'<i>%</i></div><div class="bar"><i style="width:'+jw(2)+'"></i></div></div></div></section>'
- +'<div class="stage"><img class="bg" src="./art/landscape.jpg" style="object-position:center 40%" alt="">'
-  +'<img class="fig" src="./art/figure-pose.png" alt="">'+skel
+ +'<div class="stage"><img class="bg" src="../art/landscape.jpg" style="object-position:center 40%" alt="">'
+  +'<img class="fig" src="../art/figure-pose.png" alt="">'+skel
   +'<div class="bubble"><b>'+ic('volume')+'</b>抬头上托，舒展胸廓，感受三焦通畅。</div>'
   +'<div class="side">'
    +'<button class="sitem on">'+ic('medit')+'动作预览</button>'
@@ -376,7 +376,7 @@ function pgDone(){var colors=[['#7FA08C','准确'],['#D9B25F','偏差'],['#C4472
   for(var n=0;n<7;n++){var p=rnd();var c=p<.62?'#7FA08C':(p<.87?'#D9B25F':'#C4472F');ns+='<span class="nd" style="left:'+(6+rnd()*88)+'%;background:'+c+'"></span>'}
   rows+='<div class="srow">'+ns+'</div>'}
  return '<main class="sc" style="padding-bottom:3.4rem;position:relative">'
- +'<img class="done-hbg" src="./art/landscape.jpg" alt="">'
+ +'<img class="done-hbg" src="../art/landscape.jpg" alt="">'
  +'<div class="top"><button class="icbtn" data-a="back">'+ic('back')+'</button><span></span><button class="icbtn" data-a="share-sheet" aria-label="分享琴谱">'+ic('share')+'</button></div>'
  +'<div style="margin-top:1rem;position:relative">'+brand(4)+'</div>'
  +'<div class="t-sub" style="margin-top:.6rem;position:relative">以琴养心，日日精进</div>'
@@ -400,13 +400,13 @@ function pgDone(){var colors=[['#7FA08C','准确'],['#D9B25F','偏差'],['#C4472
  +'<section class="card" style="padding:1.6rem;margin-top:1.6rem">'
   +'<div class="sec-h">'+knot()+'练习反馈<button class="sec-note">查看详细分析 ›</button></div>'
   +'<div class="fb-grid">'
-   +'<div class="fb"><span class="fimg"><img src="./art/figure-pose.png" alt=""></span><b>动作纠错</b><p>右手按弦时手腕略高，建议放松肩颈，手腕自然下沉。</p></div>'
-   +'<div class="fb"><span class="fimg"><img src="./art/guqin.png" alt=""></span><b>改正方法</b><p>练习时保持手臂放松以肘带手，注意指尖发力，控制力度。</p></div>'
+   +'<div class="fb"><span class="fimg"><img src="../art/figure-pose.png" alt=""></span><b>动作纠错</b><p>右手按弦时手腕略高，建议放松肩颈，手腕自然下沉。</p></div>'
+   +'<div class="fb"><span class="fimg"><img src="../art/guqin.png" alt=""></span><b>改正方法</b><p>练习时保持手臂放松以肘带手，注意指尖发力，控制力度。</p></div>'
    +'<div class="fb"><span class="ic">'+ic('target')+'</span><b>明日目标</b><p>继续练习本曲第3段，提升节奏稳定性，尝试达到 90% 以上。</p></div>'
    +'<div class="fb"><span class="ic">'+ic('lotus')+'</span><b>鼓励话语</b><p>今日的坚持，让心更平静。每一次，皆是进步，继续加油！</p></div></div></section>'
  +'<section class="card" style="padding:1.6rem;margin-top:1.4rem">'
   +'<div class="sec-h">'+knot()+'今日食养推荐<button class="sec-note">顺时而食，滋养身心 ›</button></div>'
-  +'<div class="food"><div class="picw"><img src="./art/q-food.jpg" alt=""></div>'
+  +'<div class="food"><div class="picw"><img src="../art/q-food.jpg" alt=""></div>'
   +'<div class="tx"><b>百合莲子羹</b><div class="tags"><span class="tag grn">养心安神</span><span class="tag org">润燥助眠</span><span class="tag">适合今日</span></div>'
   +'<p>根据你今日的练习状态，推荐滋养心神的百合莲子羹，有助于舒缓情绪、宁心安神，帮助提升睡眠质量，让身心更好地恢复。</p></div></div></section>'
  +'<div class="done-btns"><button class="btn btn-green" data-a="finish" style="flex:1.2">'+ic('check','width:2rem;height:2rem')+'完成打卡</button>'
@@ -419,7 +419,7 @@ function pgProfile(){return '<main class="sc navpad" style="min-height:100dvh;di
  +'<div class="top"><span></span><div style="display:flex;gap:1rem"><button class="icbtn" aria-label="通知">'+ic('bell')+'<span class="dot"></span></button><button class="icbtn" aria-label="设置">'+ic('gear')+'</button></div></div>'
  +'<div class="brandrow" style="margin-top:1rem"><span class="t-callig" style="font-size:4.6rem">我的</span><span class="seal">弦养</span></div>'
  +'<div class="t-sub" style="margin-top:1rem">在弦音中，遇见更好的自己</div>'
- +'<div class="pf-row"><div class="avatar"><img src="./art/q-mood.jpg" alt=""><span class="cam">'+ic('camera')+'</span></div>'
+ +'<div class="pf-row"><div class="avatar"><img src="../art/q-mood.jpg" alt=""><span class="cam">'+ic('camera')+'</span></div>'
   +'<div><h3>清弦月 <i>›</i></h3><span class="stagepill">'+ic('lotus')+'中级阶段 ›</span>'
   +'<div class="xprow"><div class="bar"><i></i></div><span>360 / 600</span></div>'
   +'<p class="pf-desc">继续练习，舒展身心，遇见更平和的自己。</p></div></div>'
@@ -448,7 +448,7 @@ function pgBody(){function chips(name,opts,multi){return '<div class="chips">'+o
     +'<span class="ck">'+ic('check')+'</span></button>'}).join('')+'</div>'}
  return '<main class="sc" style="padding-bottom:3.4rem">'
  +'<div class="top"><button class="icbtn" data-a="back">'+ic('back')+'</button><span></span><span></span></div>'
- +'<div class="bd-hero"><img class="bg" src="./art/landscape.jpg" alt=""><img class="fig" src="./art/figure-pose.png" alt=""><div class="fade"></div>'
+ +'<div class="bd-hero"><img class="bg" src="../art/landscape.jpg" alt=""><img class="fig" src="../art/figure-pose.png" alt=""><div class="fade"></div>'
   +'<div class="in"><div style="display:flex;align-items:flex-start;gap:1rem"><span class="bd-h">身体数据</span><span class="seal">弦养</span></div>'
   +'<div class="bd-sub">补充身体数据，解锁定制推荐</div>'
   +'<p class="bd-p">因人而异，顺时而练，<br>让古法智慧，更好地陪伴你的日常。</p></div></div>'

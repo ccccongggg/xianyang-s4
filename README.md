@@ -1,4 +1,6 @@
-# 弦养 · 弦上养生
+# 企业真实命题赛道 - 弦养 - 锻五音
+
+### 弦养 · 弦上养生
 
 > **跟练八段锦，做一个对的动作就拨响一根古琴弦；练完一套八段锦 = 弹完一曲古琴。**
 
@@ -81,3 +83,20 @@ npm run build
 没有后端、没有数据库、没有登录、没有 CDN、没有云同步、没有实时动作纠正、
 没有第二套拳种。**「没有后端」是设计决定，不是没做完。**（音色已于 2026-10-02 换为真实古琴采样）
 改动前先读 `docs/QA清单.md` 末尾的「范围冻结」。
+
+---
+
+## 仓库分工与补充资料（2026-11-10 整理）
+
+本仓是**弦养（八段锦 × 古琴）的唯一代码仓库**。原先的合并仓 `xianyang-duanwuyin` 已下架，电子衣柜项目独立在 `yida-wardrobe`；合并仓里剩下的队友互补资料已迁入本仓，不留第三份副本。
+
+| 内容 | 位置 |
+|---|---|
+| 队友互补资料快照 | `supplementary/liaoyu-system/`（来源 `1660536805-spec/liaoyu-system`，说明见 `supplementary/README.md`） |
+| 文化内核实验室（可插拔处方） | `src/culture/` + 路由 `#/culture` |
+| 宣纸插画卡七步问卷 | `src/views/OnboardingV2.vue` + 路由 `#/onboarding-v2`（URL 带 `?ia=art` 时自动分流） |
+| 最终版 UI 原型壳 | `public/prot/` + 路由 `#/prot` |
+| 设计交付位 | `design/{ui,tokens,spec,motion}/` |
+| 交付包 | `package-for-team/` |
+
+**2026-11-10 修复记录**：以 `07e764e`「最终版设计稿 × 真引擎融合」为准补回 27 个文件，恢复 `/culture`、`/onboarding-v2`、`/prot` 三条路由与 `?ia=art` 分流；`public/prot/art/` 的 12 张重复素材改为引用 `public/art/`，省 2.58 MiB。
